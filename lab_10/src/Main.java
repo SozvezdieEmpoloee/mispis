@@ -3,6 +3,8 @@ import classes.Faculty;
 import classes.Institute;
 import classes.ResearchAssociate;
 
+import java.util.Arrays;
+
 
 public class Main {
 
@@ -24,18 +26,18 @@ public class Main {
                 "Механика и оптика");
         ResearchAssociate emp5 = new ResearchAssociate(1234, "Запрягаев  Сергей Анатольевич",
                 "Электродинамика");
-        toizi.setEmployees(new ResearchAssociate[]{emp1, emp2, emp3, emp4, emp5});
+        piit.setEmployees(new ResearchAssociate[]{emp1, emp2, emp3, emp4, emp5});
         Institute[] fkn_institutes = fkn.getInstitutes();
         System.out.println("Кафедры на факультете " + fkn.getName() + ": \n");
         for (int i = 0; i < fkn_institutes.length; i++) {
             System.out.println(fkn_institutes[i].getName());
         }
         System.out.println("\n");
-        ResearchAssociate[] pivis_employees = toizi.getEmployees();
-        System.out.println("Сотрудники кафедры " + toizi.getName() + ": \n");
+        ResearchAssociate[] pivis_employees = piit.getEmployees();
+        System.out.println("Сотрудники кафедры " + piit.getName() + ": \n");
         for (int i = 0; i < pivis_employees.length; i++) {
             System.out.println(pivis_employees[i].getName());
         }
-        //System.out.println(Arrays.toString(fkn.getInstitutes()));
+        System.out.println(Arrays.toString(fkn.getInstitutes()));
     }
 }
